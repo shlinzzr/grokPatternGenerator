@@ -1,5 +1,3 @@
-package com.gorilla.chewbacca.util;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -25,13 +23,6 @@ import com.google.code.regexp.Matcher;
 import com.google.code.regexp.Pattern;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.gorilla.chewbacca.constant.EsFieldCommon;
-import com.gorilla.chewbacca.dto.FilterDTO;
-import com.gorilla.core.util.elasticsearch.CIBDExecutorV1;
-import com.gorilla.core.util.elasticsearch.CIBDIndexSource;
-import com.gorilla.core.util.exception.SyntaxException;
-import com.gorilla.core.util.json.JSONUtil;
-import com.gorilla.core.util.restful.QueryObject;
 
 import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
@@ -90,7 +81,7 @@ public class CoreNLPUtil {
 	
 	
 	private CoreNLPUtil() {
-		grokPatternDefinition = addPatternFromReader( new InputStreamReader(getClass().getResourceAsStream("/com/gorilla/chewbacca/controller/patterns_dir/grok.pattern")));
+		grokPatternDefinition = addPatternFromReader( new InputStreamReader(getClass().getResourceAsStream("/patterns_dir/grok.pattern")));
 	}
 
 
